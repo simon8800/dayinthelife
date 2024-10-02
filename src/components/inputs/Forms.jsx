@@ -1,6 +1,12 @@
-function Label({ className, children, htmlFor }) {
+function FieldSet({ className = "", children }) {
   return (
-    <label className={`${className}`} htmlFor={htmlFor}>
+    <div className={`${className} flex flex-col gap-2 mb-5`}>{children}</div>
+  );
+}
+
+function Label({ className = "", children, htmlFor }) {
+  return (
+    <label className={`${className} text-sm font-medium`} htmlFor={htmlFor}>
       {children}
     </label>
   );
@@ -13,11 +19,11 @@ function Input({
   name = "",
   value = "",
   placeholder = "",
-  onChange
+  onChange,
 }) {
   return (
     <input
-      className={`${className} border rounded-md py-2 px-2 w-full text-sm`}
+      className={`${className} border rounded-md py-2 px-2 w-full text-sm border-gray-300 tracking-tight`}
       id={id}
       name={name}
       type={type}
@@ -28,4 +34,4 @@ function Input({
   );
 }
 
-export { Label, Input };
+export { Label, Input, FieldSet };
