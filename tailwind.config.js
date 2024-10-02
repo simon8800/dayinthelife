@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      minHeight: {
+        fillSpace: "calc(100vh - 8rem)",
+      },
+    },
   },
   plugins: [],
 };
