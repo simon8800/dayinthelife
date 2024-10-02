@@ -2,7 +2,7 @@ import { ChevronRight, UserRound } from "lucide-react";
 
 const Card = ({className, children}) => {
   return(
-    <div className={`${className} bg-white flex flex-col border border-gray-400 rounded-md max-w-2xl p-5 gap-10`}>
+    <div className={`${className} bg-white flex flex-col border border-gray-300 shadow-sm rounded-md max-w-2xl p-5 gap-10`}>
       {children}
     </div>
   )
