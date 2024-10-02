@@ -1,8 +1,10 @@
 import Button from "../inputs/Button";
 import { Card, CardContent, CardHeader } from "../surfaces/Card";
-import { BookOpen } from "lucide-react";
+import { useParams } from "react-router-dom";
 
 export default function AuthorPage() {
+  const { username } = useParams()
+
   return (
     <main className="flex-1 py-12 px-4 md:px-6">
       <div className="max-w-4xl mx-auto">
@@ -10,7 +12,7 @@ export default function AuthorPage() {
           <div className="h-32 w-32 mb-4">
             <img src="https://placehold.co/50" alt="Alex Chen" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Alex Chen</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Alex Chen @{username}</h1>
           <p className="text-xl text-gray-600 mb-4">
             Culinary Adventurer & Aspiring Pancake Artist
           </p>
