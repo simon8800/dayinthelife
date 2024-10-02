@@ -1,31 +1,32 @@
 import { BookOpenText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="px-4 lg:px-6 h-14 flex items-center">
-      <a className="flex items-center justify-center" href="#">
+    <header className="px-4 lg:px-6 h-14 flex items-center border-b">
+      <Link className="flex items-center justify-center" to="/">
         <BookOpenText className="h-6 w-6 mr-2" />
         <span className="font-bold">A Day In The Life</span>
-      </a>
+      </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
-        <a
+        <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          to="/about"
         >
           About
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          to="#"
         >
           Random Blog
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          to="/login"
         >
           Share Your Day
-        </a>
+        </Link>
       </nav>
     </header>
   );

@@ -1,7 +1,7 @@
 import Header from "../partials/Header";
 import Footer from "../partials/Footer";
 import { Users, Globe, Shuffle, ChevronRight } from "lucide-react"
-import {Card, CardContent, CardHeader} from "../surfaces/Card";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "../surfaces/Card";
 import Button from "../inputs/Button";
 
 export default function LandingPage() {
@@ -27,14 +27,17 @@ export default function LandingPage() {
       <section className="flex flex-col justify-center items-center gap-5 w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl text-center mb-8">Featured Blog</h2>
         <Card>
-          <CardHeader title="A Day in the Life of a Deep Sea Diver" description="Posted on 10/1/2024"/>
+          <CardHeader>
+            <CardTitle>A Day in the Life of a Deep Sea Diver</CardTitle>
+            <CardDescription>Posted on 10/1/2024</CardDescription>
+          </CardHeader>
           <CardContent>
             <p className="text-md text-gray-500">"The ocean's depths hold more mysteries than we can imagine. Today, I'll take you on a journey to the bottom of the sea..."</p>
             <div className="avatar flex gap-4">
               <img className="avatarImg object-contain rounded-full" src="https://placehold.co/50" alt="SJ"/>
               <div className="flex flex-col justify-center">
                 <p className="text-sm font-medium">Sarah Johnson</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Professional Deep Sea Diver</p>
+                <p className="text-sm text-gray-500">Professional Deep Sea Diver</p>
               </div>
             </div>
             <Button className="mt-2 flex gap-1 items-center self-start">Continue Reading <ChevronRight size={16} strokeWidth={2}/></Button>
@@ -50,21 +53,21 @@ export default function LandingPage() {
               <div className="flex flex-col items-center text-center">
                 <Users className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Real People, Real Stories</h3>
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500">
                   Connect with individuals from diverse backgrounds and learn about their unique experiences.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Globe className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Global Perspectives</h3>
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500">
                   Gain insights into different cultures, professions, and lifestyles from around the world.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Shuffle className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Serendipitous Discovery</h3>
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500">
                   Each click takes you to a new, unexpected story. Broaden your perspective with every read.
                 </p>
               </div>
@@ -78,7 +81,7 @@ export default function LandingPage() {
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                   Ready to Explore?
                 </h2>
-                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl">
                   Dive into a world of personal stories. Each click is a new adventure into someone's life.
                 </p>
               </div>

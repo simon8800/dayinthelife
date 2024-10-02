@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -21,6 +22,8 @@ export default function LoginPage() {
       setUsername(event.target.value);
     } else if (event.target.name === "password") {
       setPassword(event.target.value);
+    } else if (event.target.name === "confirmPassword") {
+      setConfirmPassword(event.target.value);
     }
   };
 
@@ -30,23 +33,21 @@ export default function LoginPage() {
       <main className="min-h-fillSpace bg-gray-50 flex justify-center items-center">
         <Card className="shadow-sm w-full flex justify-center max-w-md sm:max-w-sm md:max-w-md">
           <CardHeader>
-            <CardTitle className="text-center">Welcome Back!</CardTitle>
+            <CardTitle className="text-center">Join the Adventure!</CardTitle>
             <CardDescription className="text-center">
-              Ready to share your daily adventure?
+              Create your account and start sharing your daily tales
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form action="/" method="GET">
               <FieldSet>
-                <label
-                  className="text-sm font-semibold tracking-tight"
+                <Label
                   htmlFor="username"
                 >
                   Username
-                </label>
+                </Label>
                 <Input
                   name="username"
-                  className="border-gray-950"
                   id="username"
                   type="text"
                   value={username}
@@ -56,18 +57,29 @@ export default function LoginPage() {
               </FieldSet>
               <FieldSet>
                 <Label
-                  className="text-sm font-semibold tracking-tight"
                   htmlFor="password"
                 >
                   Password
                 </Label>
                 <Input
-                  className="border-gray-950"
                   name="password"
                   id="password"
                   type="password"
                   value={password}
-                  placeholder="Enter your password"
+                  onChange={handleChange}
+                />
+              </FieldSet>
+              <FieldSet>
+                <Label
+                  htmlFor="confirmPassword"
+                >
+                  Confirm Password
+                </Label>
+                <Input
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  type="password"
+                  value={confirmPassword}
                   onChange={handleChange}
                 />
               </FieldSet>
@@ -75,12 +87,12 @@ export default function LoginPage() {
                 <Input
                   className="bg-black text-white text-sm font-semibold"
                   type="submit"
-                  value="Log In"
+                  value="Sign Up"
                 />
               </div>
             </form>
             <p className="text-center text-sm">
-              Don't have an account? <Link className="hover:underline hover:underline-offset-1" to="/signup">Sign up</Link>
+              Already have an account? <Link className="hover:underline" to="/login">Log in</Link>
             </p>
           </CardContent>
         </Card>
