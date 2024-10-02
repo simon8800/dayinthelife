@@ -3,6 +3,8 @@ import LandingPage from "./components/pages/LandingPage";
 import AuthorPage from "./components/pages/AuthorPage"
 import ProfilePage from "./components/pages/ProfilePage"
 import LoginPage from "./components/pages/LoginPage"
+import RegisterPage from "./components/pages/RegisterPage"
+import AboutPage from "./components/pages/AboutPage";
 import BlogPage from "./components/pages/BlogPage"
 import ErrorPage from "./components/pages/ErrorPage";
 
@@ -18,6 +20,16 @@ const routes = [
   {
     path: "/login",
     element: <LoginPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/signup",
+    element: <RegisterPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
     errorElement: <ErrorPage />
   },
   {
