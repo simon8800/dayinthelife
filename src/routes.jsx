@@ -1,4 +1,5 @@
 import App from "./App";
+import LandingPage from "./components/pages/LandingPage";
 import AuthorPage from "./components/pages/AuthorPage"
 import ProfilePage from "./components/pages/ProfilePage"
 import BlogPage from "./components/pages/BlogPage"
@@ -10,7 +11,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 const routes = [
   {
     path: "/",
-    element: <App />,
+    element: <LandingPage />,
     errorElement: <ErrorPage />,
   },
   {
